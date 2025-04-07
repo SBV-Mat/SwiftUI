@@ -24,4 +24,4 @@ jobs:
       #     echo Using scheme: $scheme
       
       - name: Testing iOS app
-        run: exec ./.github/scripts/test_app.sh
+        run: sudo exec ./.github/scripts/test_app.sh
