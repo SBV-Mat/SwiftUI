@@ -16,21 +16,12 @@ jobs:
         uses: actions/checkout@v4
 
       # Detect available schemes and set as variable
-      - name: Set Default Scheme
-        run: |
-          scheme_list=$(xcodebuild -list -json | tr -d "\n")
-          scheme=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
-          echo $scheme | cat >scheme
-          echo Using scheme: $scheme
-      
-      - uses: mxcl/xcodebuild@v3
-        with:
-          platform: 'iOS'
-          action: 'test'
-
-      # Run tests on iPhone 14 Simulator with iOS 16.0
-      # - name: Run Tests on iPhone 15 Simulator (iOS 18.1)
+      # - name: Set Default Scheme
       #   run: |
-      #     xcodebuild test \
-      #       -scheme ' $scheme ' \
-      #       -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.1'
+      #     scheme_list=$(xcodebuild -list -json | tr -d "\n")
+      #     scheme=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
+      #     echo $scheme | cat >scheme
+      #     echo Using scheme: $scheme
+      
+      - name: Testing iOS app
+        run: exec ./.github/scripts/test_app.sh
