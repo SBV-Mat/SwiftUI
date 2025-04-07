@@ -25,6 +25,6 @@ jobs:
       
       - name: Testing iOS app
         run: |
-          xcodebuild -scheme MyWaySwiftUI\ iOS \
+          xcodebuild -scheme MyWaySwiftUI \
               -destination platform=iOS\ Simulator,OS=18.1,name=iPhone\ 15 \
               clean test | xcpretty
