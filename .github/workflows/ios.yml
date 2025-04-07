@@ -24,4 +24,8 @@ jobs:
       #     echo Using scheme: $scheme
       
       - name: Testing iOS app
-        run: sudo exec ./.github/scripts/test_app.sh
+        run: |
+          xcodebuild -workspace MyWaySwiftUI.xcworkspace \
+              -scheme MyWaySwiftUI\ iOS \
+              -destination platform=iOS\ Simulator,OS=18.1,name=iPhone\ 15 \
+              clean test | xcpretty
