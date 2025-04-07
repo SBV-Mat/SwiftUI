@@ -20,16 +20,3 @@ jobs:
           default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
           echo $default | cat >default
           echo Using default scheme: $default
-      # - name: Show available simulators
-      #   run: xcrun simctl list devices
-      - name: Detect available simulator
-        run: |
-          sim=$(xcrun simctl list devices available | grep "iPhone 14 (" | grep -oE '[A-F0-9-]{36}' | head -n1)
-          echo $sim | cat >sim
-          echo Using simulator: $sim
-      - name: Run tests
-        run: |
-          xcodebuild test \
-            -workspace MyWaySwiftUI.xcworkspace \
-            -scheme {{ $default }} \
-            -destination {{ $sim }}
