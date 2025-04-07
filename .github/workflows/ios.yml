@@ -23,7 +23,7 @@ jobs:
           echo $scheme | cat >scheme
           echo Using scheme: $scheme
       
-      - uses: mxcl/xcodebuild@v1.9.2
+      - uses: mxcl/xcodebuild@v3
         with:
           platform: 'iOS'
           action: 'test'
