@@ -35,16 +35,6 @@
 			path = MyWaySwiftUI;
 			sourceTree = "<group>";
 		};
-		943003F92D8B0EEF00955CBF /* MyWaySwiftUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyWaySwiftUITests;
-			sourceTree = "<group>";
-		};
-		943004032D8B0EEF00955CBF /* MyWaySwiftUIUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyWaySwiftUIUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				943003E82D8B0EEE00955CBF /* MyWaySwiftUI */,
-				943003F92D8B0EEF00955CBF /* MyWaySwiftUITests */,
-				943004032D8B0EEF00955CBF /* MyWaySwiftUIUITests */,
 				943003E72D8B0EEE00955CBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +118,6 @@
 			dependencies = (
 				943003F82D8B0EEF00955CBF /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				943003F92D8B0EEF00955CBF /* MyWaySwiftUITests */,
-			);
 			name = MyWaySwiftUITests;
 			packageProductDependencies = (
 			);
@@ -152,9 +137,6 @@
 			);
 			dependencies = (
 				943004022D8B0EEF00955CBF /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				943004032D8B0EEF00955CBF /* MyWaySwiftUIUITests */,
 			);
 			name = MyWaySwiftUIUITests;
 			packageProductDependencies = (
